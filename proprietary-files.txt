@@ -1976,7 +1976,26 @@ vendor/lib/libmmcamera_ubifocus_lib.so
 lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so
 lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so
 
-# Display calibration - from MIUI Stable - V10.2.3.0.NCCMIXM
-etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml:vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml
-etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3a.xml:vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3a.xml
-etc/qdcm_calib_data_nt35521s_HD720p_video_EBBG_c3a.xml:vendor/etc/qdcm_calib_data_nt35521s_HD720p_video_EBBG_c3a.xml
+# Display calibration - from MIUI Stable - V9.2.6.0.NCCMIEK
+etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3b.xml:vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3b.xml
+etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3b.xml:vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3b.xml
+
+# Graphics firmware - from MIUI Stable - V9.2.6.0.NCCMIEK
+etc/firmware/a225p5_pm4.fw:vendor/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw:vendor/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw:vendor/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
+etc/firmware/a420_pfp.fw:vendor/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw:vendor/firmware/a420_pm4.fw
+etc/firmware/a530_gpmu.fw2:vendor/firmware/a530_gpmu.fw2
+etc/firmware/a530_pfp.fw:vendor/firmware/a530_pfp.fw
+etc/firmware/a530_pm4.fw:vendor/firmware/a530_pm4.fw
+etc/firmware/a530v1_pfp.fw:vendor/firmware/a530v1_pfp.fw
+etc/firmware/a530v1_pm4.fw:vendor/firmware/a530v1_pm4.fw
+etc/firmware/a530v2_seq.fw2:vendor/firmware/a530v2_seq.fw2
+etc/firmware/a530v3_gpmu.fw2:vendor/firmware/a530v3_gpmu.fw2
+etc/firmware/a530v3_seq.fw2:vendor/firmware/a530v3_seq.fw2
+etc/firmware/a540_gpmu.fw2:vendor/firmware/a540_gpmu.fw2

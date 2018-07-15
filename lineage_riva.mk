@@ -14,23 +14,19 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/xiaomi/rolex/full_rolex.mk)
+$(call inherit-product, device/xiaomi/riva/full_riva.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_rolex
+PRODUCT_NAME := lineage_riva
 BOARD_VENDOR := Xiaomi
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_GAPPS_ARCH := arm64
-TARGET_DENSITY := xhdpi
-
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="rolex-user 7.1.2 N2G47H V9.2.6.0.NCCMIEK release-keys"
+    PRIVATE_BUILD_DESC="riva-user 7.1.2 N2G47H V9.2.6.0.NCCMIEK release-keys"
 
 # Set BUILD_FINGERPRINT variable
-BUILD_FINGERPRINT := "Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys"
+BUILD_FINGERPRINT := "Xiaomi/riva/riva:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys"
 

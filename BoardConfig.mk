@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/rolex
+DEVICE_PATH := device/xiaomi/riva
 
 #BOARD_USES_QCOM_HARDWARE := true
 
@@ -51,7 +51,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := rolex_defconfig
+TARGET_KERNEL_CONFIG := riva_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8917
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 BUILD_BROKEN_PHONY_TARGETS := true
@@ -177,8 +177,16 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(DEVICE_PATH)/lineagehw|**/*.java
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_riva
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
+TARGET_RECOVERY_DEVICE_MODULES := libinit_riva
+
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
+# Hack for remove liblight
+$(shell rm -rf hardware/qcom/display-caf/msm8996/liblight)
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -258,4 +266,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 
 # Inherit from the proprietary version
--include vendor/xiaomi/rolex/BoardConfigVendor.mk
+-include vendor/xiaomi/riva/BoardConfigVendor.mk

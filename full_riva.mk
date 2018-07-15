@@ -18,13 +18,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from rolex device
-$(call inherit-product, device/xiaomi/rolex/device.mk)
+# Inherit from riva device
+$(call inherit-product, device/xiaomi/riva/device.mk)
 
 # Device identifier. This must come after all inclusions
 TARGET_VENDOR := Xiaomi
-PRODUCT_DEVICE := rolex
-PRODUCT_NAME := full_rolex
+PRODUCT_DEVICE := riva
+PRODUCT_NAME := full_riva
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 4A
+PRODUCT_MODEL := Redmi 5A
 PRODUCT_MANUFACTURER := Xiaomi

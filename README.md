@@ -1,28 +1,72 @@
-Copyright (C) 2018 - The LineageOS Project
+# Device Tree for Xiaomi Redmi 4A (rolex) and Xiaomi Redmi 5A (riva)
 
-Device configuration for Xiaomi Redmi 4A ("rolex")
-==================================================
+## Spec Sheet
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Specifications Redmi 4A</th>
+    <th>Specifications Redmi 5A</th>
+  </tr>
+  <tr>
+    <td>CPU</td>
+    <td colspan="2">Quad-core 1.4 GHz Cortex-A53</td>
+  </tr>
+  <tr>
+    <td>Chipset</td>
+    <td colspan="2">Qualcomm MSM8917 Snapdragon 425</td>
+  </tr>
+  <tr>
+    <td>GPU</td>
+    <td colspan="2">Adreno 308</td>
+  </tr>
+  <tr>
+    <td>Memory</td>
+    <td colspan="2">2/3 GB</td>
+  </tr>
+  <tr>
+    <td>Shipped Android Version</td>
+    <td>6.0.1</td>
+    <td>7.1.2</td>
+  </tr>
+  <tr>
+    <td>Storage</td>
+    <td colspan="2">16/32 GB</td>
+  </tr>
+  <tr>
+    <td>MicroSD</td>
+    <td colspan="2">Up to 256 GB</td>
+  </tr>
+  <tr>
+    <td>Battery</td>
+    <td>3120 mAh (non-removable)</td>
+    <td>3000 mAh (non-removable)</td>
+  </tr>
+  <tr>
+    <td>Dimensions</td>
+    <td>139.9 x 70.4 x 8.5 mm</td>
+    <td>140.4 x 70.1 x 8.35 mm</td>
+  </tr>
+  <tr>
+    <td>Display</td>
+    <td colspan="2">720 x 1280 pixels, 5" (~294 PPI)</td>
+  </tr>
+  <tr>
+    <td>Rear Camera</td>
+    <td colspan="2">13 MP, f/2.2, autofocus, LED flash</td>
+  </tr>
+  <tr>
+    <td>Front Camera</td>
+    <td>5 MP, f/2.2</td>
+    <td>5 MP, f/2.0</td>
+  </tr>
+  <tr>
+    <td>Release Date</td>
+    <td>November 2016</td>
+    <td>December 2017 </td>
+  </tr>
+</table>
 
-The Xiaomi Redmi 4A (codenamed _"rolex"_) is a mid-range smartphone from Xiaomi.
-It was announced on November 2016.
+## Device Picture
+Xiaomi Redmi 4A: https://www.gsmarena.com/xiaomi_redmi_4a-pictures-8420.php
+Xiaomi Redmi 5A: https://www.gsmarena.com/xiaomi_redmi_5a-pictures-8898.php
 
-## Device specifications
-
-Basic   | Spec Sheet
--------:|:-------------------------
-SoC     | Qualcomm MSM8917 Snapdragon 425
-CPU     | Quad-core 1.4 GHz ARM® Cortex™ A53
-GPU     | Adreno 308
-Memory  | 2/3 GB RAM 
-Shipped Android Version | 6.0.1
-Storage | 16/32 GB
-MicroSD | Up to 256 GB
-Battery | Non-removable Li-Ion 3120 mAh battery
-Dimensions | 139.9 x 70.4 x 8.5 mm
-Display | 720 x 1280 pixels, 5.0 inches (~296 ppi pixel density)
-Rear Camera | 13 MP, f/2.2, autofocus, LED flash
-Front Camera | 5 MP, f/2.2
-
-## Device picture
-
-![Redmi 4A](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-4a-3.jpg "Redmi 4A in white")
