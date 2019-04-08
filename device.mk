@@ -21,6 +21,9 @@ PRODUCT_BOARD_PLATFORM := msm8937
 
 PRODUCT_SOONG_NAMESPACES += device/xiaomi/rolex
 
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
