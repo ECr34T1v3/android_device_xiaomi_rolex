@@ -20,8 +20,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PEX stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+#Definitions
+IS_GO_VERSION := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_MINIMAL_APPS := false
+#CUSTOM_BUILD_TYPE := OFFICIAL
+
+# Boot Animation
+TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit from rolex device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -30,7 +41,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := rolex
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi 4A
-PRODUCT_NAME := lineage_rolex
+PRODUCT_NAME := aosp_rolex
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
