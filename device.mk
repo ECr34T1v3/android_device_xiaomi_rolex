@@ -128,8 +128,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
-    libmm-qcamera \
-    libshim_libmmcamera \
     Snap
 
 PRODUCT_PACKAGES += \
@@ -395,8 +393,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service
+    android.hardware.thermal@2.0-impl \
+    android.hardware.thermal@2.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
