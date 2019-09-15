@@ -29,7 +29,7 @@ LOCAL_SRC_FILES += \
         HAL3/QCamera3CropRegionMapper.cpp \
         HAL3/QCamera3StreamMem.cpp
 
-LOCAL_CFLAGS := -Wall -Wextra -Werror -Wno-unused-parameter -Wno-unused-variable
+LOCAL_CFLAGS := -Wall -Wextra -Werror -Wno-unused-parameter -Wno-unused-variable -Wno-implicit-fallthrough
 
 #HAL 1.0 source
 
@@ -73,7 +73,7 @@ USE_DISPLAY_SERVICE := true
 LOCAL_CFLAGS += -DUSE_DISPLAY_SERVICE
 LOCAL_CFLAGS += -std=c++11 -std=gnu++1y
 else
-LOCAL_CFLAGS += -std=c++11 -std=gnu++0x
+LOCAL_CFLAGS += -std=c++14 -std=gnu++1z
 endif
 
 #HAL 1.0 Flags
@@ -87,12 +87,15 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/stack/mm-camera-interface/inc \
         $(LOCAL_PATH)/util \
         $(LOCAL_PATH)/HAL3 \
-        hardware/libhardware/include/hardware \
-        $(call project-path-for,qcom-media)/libstagefrighthw \
-        $(call project-path-for,qcom-media)/mm-core/inc \
-        system/core/include/cutils \
-        system/core/include/system \
-        system/media/camera/include/system
+        hardware/qcom/media-caf/msm8996/libstagefrighthw \
+        hardware/qcom/media-caf/msm8996/mm-core/inc \
+        $(TARGET_OUT_HEADERS)/mm-camera-lib/cp/prebuilt
+
+LOCAL_HEADER_LIBRARIES := media_plugin_headers
+LOCAL_HEADER_LIBRARIES += libandroid_sensor_headers
+LOCAL_HEADER_LIBRARIES += libcutils_headers
+LOCAL_HEADER_LIBRARIES += libsystem_headers
+LOCAL_HEADER_LIBRARIES += libhardware_headers
 
 #HAL 1.0 Include paths
 LOCAL_C_INCLUDES += \
@@ -106,11 +109,11 @@ ifeq ($(TARGET_TS_MAKEUP),true)
 LOCAL_CFLAGS += -DTARGET_TS_MAKEUP
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/HAL/tsMakeuplib/include
 endif
-ifneq (,$(filter msm8974 msm8916 msm8226 msm8610 msm8916 apq8084 msm8084 msm8994 msm8992 msm8952 msm8937 msm8953 msm8996 msmcobalt msmfalcon, $(TARGET_BOARD_PLATFORM)))
+ifneq (,$(filter msm8974 msm8916 msm8226 msm8610 msm8916 apq8084 msm8084 msm8994 msm8992 msm8952 msm8937 msm8953 msm8996 msmcobalt msmfalcon, $(PRODUCT_BOARD_PLATFORM)))
     LOCAL_CFLAGS += -DVENUS_PRESENT
 endif
 
-ifneq (,$(filter msm8996 msmcobalt msmfalcon,$(TARGET_BOARD_PLATFORM)))
+ifneq (,$(filter msm8996 msmcobalt msmfalcon,$(PRODUCT_BOARD_PLATFORM)))
     LOCAL_CFLAGS += -DUBWC_PRESENT
 endif
 
@@ -118,7 +121,7 @@ endif
 LOCAL_C_INCLUDES += \
         $(TARGET_OUT_HEADERS)/qcom/display
 LOCAL_C_INCLUDES += \
-        $(call project-path-for,qcom-display)/libqservice
+        hardware/qcom/display-caf/msm8996/libqservice
 LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libsync
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
@@ -137,7 +140,7 @@ LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 
 
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := camera.$(PRODUCT_BOARD_PLATFORM)
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
 

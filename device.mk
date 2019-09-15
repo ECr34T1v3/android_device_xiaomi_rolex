@@ -19,6 +19,8 @@ $(call inherit-product, vendor/xiaomi/rolex/rolex-vendor.mk)
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8937
 
+PRODUCT_SOONG_NAMESPACES += device/xiaomi/rolex
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
