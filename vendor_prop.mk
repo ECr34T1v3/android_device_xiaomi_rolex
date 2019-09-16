@@ -165,6 +165,7 @@ vendor.vidc.dec.downscalar_width=1920 \
 vendor.vidc.dec.downscalar_height=1088 \
 vendor.vidc.disable.split.mode=1 \
 vendor.vidc.enc.disable.pq=true \
+media.settings.xml=/vendor/etc/media_profiles_V1_0.xml \
 vendor.video.disable.ubwc=1
 
 # Perf

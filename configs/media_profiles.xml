@@ -808,7 +808,6 @@
                    sampleRate="48000"
                    channels="1" />
         </EncoderProfile>
->>>>>>> 955e1540... land: configs: Update media configs
 
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
