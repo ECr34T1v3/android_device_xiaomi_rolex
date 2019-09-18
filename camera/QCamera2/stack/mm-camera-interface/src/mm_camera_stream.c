@@ -32,8 +32,8 @@
 #include <pthread.h>
 #include <errno.h>
 #include <fcntl.h>
-#include <media/msm_media_info.h>
 #include <unistd.h>
+#include <media/msm_media_info.h>
 #define TIME_H <SYSTEM_HEADER_PREFIX/time.h>
 #include TIME_H
 #define IOCTL_H <SYSTEM_HEADER_PREFIX/ioctl.h>
