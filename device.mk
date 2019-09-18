@@ -19,7 +19,6 @@ $(call inherit-product, vendor/xiaomi/rolex/rolex-vendor.mk)
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8937
 
-PRODUCT_SOONG_NAMESPACES += device/xiaomi/rolex
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
