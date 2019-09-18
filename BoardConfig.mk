@@ -255,6 +255,7 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/rolex/BoardConfigVendor.mk
