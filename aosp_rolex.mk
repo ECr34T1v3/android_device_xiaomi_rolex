@@ -17,10 +17,14 @@
 $(call inherit-product, device/xiaomi/rolex/full_rolex.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
-PRODUCT_NAME := arrow_rolex
+PRODUCT_NAME := aosp_rolex
 BOARD_VENDOR := Xiaomi
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_GAPPS_ARCH := arm64
+TARGET_DENSITY := xhdpi
+
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

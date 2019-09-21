@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_rolex.mk
+    $(LOCAL_DIR)/aosp_rolex.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_rolex-userdebug
+    aosp_rolex-userdebug
