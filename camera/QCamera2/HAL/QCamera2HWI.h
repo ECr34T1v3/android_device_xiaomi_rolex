@@ -35,7 +35,7 @@
 #include <utils/Condition.h>
 
 // Camera dependencies
-#include "hardware/camera.h"
+#include "camera.h"
 #include "QCameraAllocator.h"
 #include "QCameraChannel.h"
 #include "QCameraCmdThread.h"

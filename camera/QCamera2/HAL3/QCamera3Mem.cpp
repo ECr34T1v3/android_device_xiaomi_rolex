@@ -27,7 +27,7 @@
  *
  */
 
-#define LOG_TAG "QCameraHWI_Mem"
+#define LOG_TAG "QCamera3HWI_Mem"
 
 // System dependencies
 #include <fcntl.h>

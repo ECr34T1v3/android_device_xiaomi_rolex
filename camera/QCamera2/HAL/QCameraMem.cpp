@@ -34,7 +34,7 @@
 #include <utils/Errors.h>
 #define MMAN_H <SYSTEM_HEADER_PREFIX/mman.h>
 #include MMAN_H
-#include "hardware/gralloc.h"
+#include "gralloc.h"
 #include "gralloc_priv.h"
 
 // Camera dependencies
@@ -1771,9 +1771,11 @@ int QCameraVideoMemory::convCamtoOMXFormat(cam_format_t format)
         case CAM_FORMAT_YUV_420_NV12_VENUS:
             omxFormat = OMX_COLOR_FormatYUV420SemiPlanar;
             break;
+#ifndef VANILLA_HAL
         case CAM_FORMAT_YUV_420_NV12_UBWC:
             omxFormat = QOMX_COLOR_FORMATYUV420PackedSemiPlanar32mCompressed;
             break;
+#endif
         default:
             omxFormat = OMX_COLOR_FormatYUV420SemiPlanar;
     }

@@ -24,22 +24,23 @@
 #include <cutils/properties.h>
 
 // System dependencies
-//#include <camera/CameraParameters.h>
+#include <CameraParameters.h>
 #include <utils/Errors.h>
 
 // Camera dependencies
-#include "hardware/camera.h"
+#include "camera.h"
 #include "QCameraMem.h"
 #include "QCameraParametersIntf.h"
 #include "QCameraThermalAdapter.h"
 #include "QCameraCommon.h"
-#include "CameraParameters.h"
 
 
 extern "C" {
 #include "mm_jpeg_interface.h"
 }
 
+using ::android::hardware::camera::common::V1_0::helper::CameraParameters;
+using ::android::hardware::camera::common::V1_0::helper::Size;
 using namespace android;
 
 namespace qcamera {
@@ -616,9 +617,6 @@ private:
     static const char KEY_TS_MAKEUP[];
     static const char KEY_TS_MAKEUP_WHITEN[];
     static const char KEY_TS_MAKEUP_CLEAN[];
-    static const char KEY_XM_MAKEUP[];
-    static const char KEY_XM_MAKEUP_WHITEN[];
-    static const char KEY_XM_MAKEUP_CLEAN[];
 #endif
     //param key for HFR batch size
     static const char KEY_QC_VIDEO_BATCH_SIZE[];
@@ -961,7 +959,6 @@ private:
     int32_t setStillMore(const QCameraParameters& );
 #ifdef TARGET_TS_MAKEUP
     int32_t setTsMakeup(const QCameraParameters& );
-    int32_t setXmMakeup(const QCameraParameters& );
 #endif
     int32_t setNoiseReductionMode(const QCameraParameters& );
     int32_t setRedeyeReduction(const QCameraParameters& );

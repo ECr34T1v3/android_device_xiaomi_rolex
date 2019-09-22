@@ -42,7 +42,7 @@
 #include "qdMetaData.h"
 
 // Camera dependencies
-#include "hardware/camera.h"
+#include "camera.h"
 
 extern "C" {
 #include "mm_camera_interface.h"

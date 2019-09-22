@@ -4,9 +4,6 @@ LOCAL_PATH := $(call my-dir)
 include $(LOCAL_PATH)/../../../common.mk
 include $(CLEAR_VARS)
 
-LOCAL_HEADER_LIBRARIES := libhardware_headers
-LOCAL_HEADER_LIBRARIES += media_plugin_headers
-
 MM_CAM_FILES := \
         src/mm_camera_interface.c \
         src/mm_camera.c \
@@ -43,6 +40,7 @@ LOCAL_COPY_HEADERS += ../common/cam_types.h
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/inc \
     $(LOCAL_PATH)/../common \
+    hardware/libhardware/include/hardware \
     system/media/camera/include \
 
 LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
@@ -54,13 +52,13 @@ ifneq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 17 ))" )))
   LOCAL_CFLAGS += -include bionic/libc/kernel/common/linux/un.h
 endif
 
-LOCAL_CFLAGS += -Wall -Wextra -Wno-error -Wno-implicit-function-declaration
+LOCAL_CFLAGS += -Wall -Wextra -Werror
 
 LOCAL_SRC_FILES := $(MM_CAM_FILES)
 
 LOCAL_MODULE           := libmmcamera_interface
-LOCAL_PRELINK_MODULE   := false
-LOCAL_SHARED_LIBRARIES := libdl libcutils liblog
+LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libutils
+LOCAL_HEADER_LIBRARIES := libhardware_headers
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 
