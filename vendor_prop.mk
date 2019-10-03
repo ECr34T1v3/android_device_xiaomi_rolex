@@ -35,6 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 bluetooth.hfp.client=1 \
 ro.qualcomm.bt.hci_transport=smd \
 ro.bluetooth.hfp.ver=1.7 \
+persist.bluetooth.bluetooth_audio_hal.disabled=true \
 vendor.qcom.bluetooth.soc=smd
 
 # Boot
