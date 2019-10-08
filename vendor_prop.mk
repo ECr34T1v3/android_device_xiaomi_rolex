@@ -89,6 +89,7 @@ vendor.gralloc.enable_fb_ubwc=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.perf_hint_window=50 \
 debug.hwui.use_buffer_age=false \
+ro.sf.enable_fb_scaling=1 \
 persist.graphics.vulkan.disable=true \
 persist.debug.wfd.enable=1 \
 debug.sdm.support_writeback=0 \
@@ -119,6 +120,7 @@ drm.service.enabled=true
 #Enable B service adj transition by default
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.sys.fw.bservice_enable=true \
+ro.vendor.qti.cgroup_follow.enable=true \
 ro.vendor.qti.sys.fw.bservice_limit=5 \
 ro.vendor.qti.sys.fw.bservice_age=5000
 
