@@ -16,7 +16,7 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-#define BTM_DEF_LOCAL_NAME   "Xiaomi Redmi 5A"
+#define BTM_DEF_LOCAL_NAME   "Xiaomi Redmi 4A"
 
 #pragma push_macro("PROPERTY_VALUE_MAX")
 

@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=riva
+DEVICE=rolex
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2017

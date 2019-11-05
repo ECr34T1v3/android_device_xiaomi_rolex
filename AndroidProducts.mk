@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_riva.mk
+    $(LOCAL_DIR)/aosp_rolex.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_riva-userdebug
+    aosp_rolex-userdebug
