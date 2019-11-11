@@ -16,8 +16,8 @@
 
 $(call inherit-product, device/xiaomi/rolex/full_rolex.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit some common AospExtended stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
 PRODUCT_NAME := aosp_rolex
 BOARD_VENDOR := Xiaomi
